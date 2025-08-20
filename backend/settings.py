@@ -85,6 +85,11 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINGS = True
 
+CORS_ALLOWED_ORIGINS = [
+    "https://readhub-eta.vercel.app/",
+    "http://localhost:4200",  # for local dev
+]
+
 ROOT_URLCONF = "backend.urls"
 
 FRONTEND_URL = "http://localhost:4200"  # for development
