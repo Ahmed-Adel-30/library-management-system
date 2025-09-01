@@ -448,7 +448,9 @@ class OrderList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     print(repr(TransactionSerializer()))
 
-
+    def get_queryset(self):
+        return Order.objects.filter(user=self.request.user.id)
+    
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
