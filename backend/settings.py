@@ -243,6 +243,6 @@ SERVER_EMAIL = EMAIL_HOST_USER
 STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
 
 try:
-    GEMINI_API_KEY = config('GEMINI-API-KEY', default='AIzaSyC8g-EHGUFz7OA1YhX50DS8N3jbLM5L_Gw')
+    GEMINI_API_KEY = config('GEMINI-API-KEY')
 except:
     print("Please, get you GEMINI API KEY!")
